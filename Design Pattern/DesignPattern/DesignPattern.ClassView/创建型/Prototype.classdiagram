@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="ab930a61-f495-47c6-af2d-e604615cfe26" name="Prototype（原型模式）" linkedPackageId="4f66d178-b239-4518-8eb0-a1ba1b194650" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="8c988334-ba9d-42d5-bc08-ce68133c6a13">
+      <elementDefinition Id="43f0719f-ca13-4115-845c-173a23ed4daf" />
+      <body>原型类，声明一个克隆自身的接口</body>
+      <annotatedElements>
+        <classMoniker Id="a4896ee3-88fb-4382-a320-f42766862868" LastKnownName="Prototype" />
+      </annotatedElements>
+    </comment>
+    <comment Id="c00cfde9-abf2-44a7-a199-ca952ad1e4f4">
+      <elementDefinition Id="81ea3caf-044d-4f8d-9076-ecde9c74a503" />
+      <body>具体原型类，实现一个克隆自身的操作</body>
+      <annotatedElements>
+        <classMoniker Id="d68c4b2b-c5d1-45df-b4e0-626aaf0f5bd6" LastKnownName="ConcretePrototype1" />
+        <classMoniker Id="3d4b62bb-de84-4021-8e33-7be7964ef4f3" LastKnownName="ConcretePrototype2" />
+      </annotatedElements>
+    </comment>
+    <comment Id="351e2060-ee95-4fd1-bf97-1b550eee804a">
+      <elementDefinition Id="3208ff31-d41d-4bf3-9dcd-fc330c9e5d80" />
+      <body>让一个原型克隆自身从而创建一个新的对象</body>
+      <annotatedElements>
+        <classMoniker Id="151c2347-d4d3-4e25-88c3-ad0ebcf611a5" LastKnownName="Client" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="3f7ccc54-4e95-4f22-8474-ff67610d7fc5">
+      <profileInstance Id="89b6c076-61bb-497d-a754-cb2e41aba28a" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="e331e213-1411-4e22-9a87-bedbb3966365">
+      <profileInstance Id="207b333d-810a-4532-945f-bbc6af903afc" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a4896ee3-88fb-4382-a320-f42766862868" name="Prototype" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="755d1c85-1c47-4201-b9e8-857020b3d52c" />
+        <ownedOperationsInternal>
+          <operation Id="67c8709b-32f0-4abf-9429-146a1a00c894" name="Clone" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="cf838cd1-dfec-4673-8233-caee36146ad5" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d68c4b2b-c5d1-45df-b4e0-626aaf0f5bd6" name="ConcretePrototype1" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b523d71d-5b9d-4ae8-acb2-6bd77d65b3e9" />
+        <generalsInternal>
+          <generalization Id="842426ba-3dc8-4258-b78a-96937087511d" isSubstitutable="false">
+            <classMoniker Id="a4896ee3-88fb-4382-a320-f42766862868" LastKnownName="Prototype" />
+            <elementDefinition Id="08c93ab5-9d88-4d9f-bd7e-54a8eeeb2ace" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="85abbcaf-a2b4-4b5c-a120-9b2b62651c70" name="Clone" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2761e050-b990-48ad-bae3-a67c2dd6b12b" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="3d4b62bb-de84-4021-8e33-7be7964ef4f3" name="ConcretePrototype2" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3478609e-df62-4f9c-a180-83441a73c648" />
+        <generalsInternal>
+          <generalization Id="53da80bb-8cdf-45be-8997-8963f41a82ff" isSubstitutable="false">
+            <classMoniker Id="a4896ee3-88fb-4382-a320-f42766862868" LastKnownName="Prototype" />
+            <elementDefinition Id="df84fa90-6605-4af4-9f75-2777441725e1" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="77b8994b-284f-4024-935c-2468321451a7" name="Clone" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="58c5455b-6df4-45da-8319-3310dc6b58d1" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="151c2347-d4d3-4e25-88c3-ad0ebcf611a5" name="Client" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="eb1baead-2829-434b-a5e7-a1d857181842" />
+        <targetEnds>
+          <association Id="74d06742-efe4-4a39-814a-42b3f04ecb7d" isDerived="false" sourceEndRoleName="Client" targetEndRoleName="-prototype" isLeaf="false" isAbstract="false">
+            <classMoniker Id="a4896ee3-88fb-4382-a320-f42766862868" LastKnownName="Prototype" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bbd0a03b-84dc-49a9-ab80-c3fc4d16621f" name="Client" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0417f3dd-e560-4e8e-b228-4bf55ed4b4a1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5d565ce8-190a-4f6d-9d5f-ff55284946ff" name="-prototype" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="177b5f9f-b5ee-4f58-8918-202072381e8d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b9e0f596-be4d-43f4-96b6-ab1b7587ce86" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="4f66d178-b239-4518-8eb0-a1ba1b194650" name="DesignPattern.ClassView">
+    <elementDefinition Id="eb0fd501-f10a-43ce-bedb-7510acc6e4c8" />
+  </package>
+</logicalClassDesignerModel>

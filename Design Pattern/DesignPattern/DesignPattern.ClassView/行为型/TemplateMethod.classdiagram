@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="ab81c2c3-1e96-4805-8381-d40a831bd882" name="TemplateMethod（模板方法模式）" linkedPackageId="305f1039-b60e-483f-bfcf-e1ccc7da353b" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="f1d44897-094d-445c-ac9b-125ac3d7e7e1">
+      <elementDefinition Id="2e946dce-44cf-406d-8392-669719bf48b5" />
+      <body>实现了一个模板方法，定义了算法的骨架，具体子类将重定义PrimitiveOperation 以实现
+一个算法的步骤</body>
+      <annotatedElements>
+        <classMoniker Id="371043cc-3c33-48cd-b604-abadfe2165b8" LastKnownName="AbstractClass" />
+      </annotatedElements>
+    </comment>
+    <comment Id="0beb27f5-0126-45a4-a88e-a3cd3480828f">
+      <elementDefinition Id="ac22131c-aa69-4863-95d8-56e0f5cb0398" />
+      <body>实现PrimitiveOperation以完成算法中与特定子类相关的步骤</body>
+      <annotatedElements>
+        <classMoniker Id="b206df52-0995-4db1-a7d4-97c870d1ab58" LastKnownName="ConcreteClass" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="e51905e5-ebd8-42c8-8956-c9c68538e97f">
+      <profileInstance Id="26365a99-7c5c-4f1f-a291-8d4a9c732350" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="3dcdf618-ea0a-4bd1-b069-523eb8a90776">
+      <profileInstance Id="9bb4c534-6d62-4bad-9229-4a34377a3d6b" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="371043cc-3c33-48cd-b604-abadfe2165b8" name="AbstractClass" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c4ce254e-72a6-4ca1-a9fc-8232f219efa9" />
+        <ownedOperationsInternal>
+          <operation Id="b763e494-b3b0-40a1-a0c5-56e26ab621ef" name="TemplateMethod" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="efcca416-e132-4c83-9372-0e482273c7f3" />
+          </operation>
+          <operation Id="bf3b0559-adb2-4674-85d5-cda1de4309cb" name="PrimitiveOperation1" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6b5c72f8-6d83-4c8a-aec3-f2837c14cfed" />
+          </operation>
+          <operation Id="eec1d43d-357f-4292-bb9f-3300350e5378" name="PrimitiveOperation2" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="781ca396-754e-4eaf-8d82-7631caff869d" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b206df52-0995-4db1-a7d4-97c870d1ab58" name="ConcreteClass" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ff735df5-9ab3-4f22-9c23-945a9e026cf0" />
+        <generalsInternal>
+          <generalization Id="77e943bd-c641-41cb-b95c-c98d3e34b1b3" isSubstitutable="false">
+            <classMoniker Id="371043cc-3c33-48cd-b604-abadfe2165b8" LastKnownName="AbstractClass" />
+            <elementDefinition Id="e262a74a-c2a6-4eae-96b0-3dbf756562ee" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="1870e52f-d7bd-455d-8f0f-f56a05db779f" name="PrimitiveOperation1" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4aa93aa1-a0b0-4998-b2f3-d2379482cf53" />
+          </operation>
+          <operation Id="9dca5ca2-31f5-4cc0-8847-efb4904f123f" name="PrimitiveOperation2" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="90852fd5-f7ba-40db-b028-985020a963ac" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="305f1039-b60e-483f-bfcf-e1ccc7da353b" name="DesignPattern.ClassView">
+    <elementDefinition Id="eb0fd501-f10a-43ce-bedb-7510acc6e4c8" />
+  </package>
+</logicalClassDesignerModel>

@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="9e761b61-422f-46db-892c-996b1ff2ef4a" name="Bridge（桥接模式）" linkedPackageId="ceaa375f-3971-438e-90e4-77952cc09cc2" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="bab9f885-81da-45e8-9f53-cbed7970b6ba">
+      <elementDefinition Id="80dc6042-ede4-4694-ac79-4f6940672825" />
+      <body>实现</body>
+      <annotatedElements>
+        <classMoniker Id="a64eec0a-115d-42e8-9128-93614a52f828" LastKnownName="Implementor" />
+      </annotatedElements>
+    </comment>
+    <comment Id="76687953-45dc-4848-aa17-c5ce2d65e391">
+      <elementDefinition Id="df8a9636-a80f-4b34-b4a4-31fd6d74e86a" />
+      <body>具体实现</body>
+      <annotatedElements>
+        <classMoniker Id="0185d91e-df41-4e07-ae58-913bb7986046" LastKnownName="ConcreteImplementorA" />
+        <classMoniker Id="7ff90ab8-fbfe-4244-9ba7-ed001228a042" LastKnownName="ConcreteImplementorB" />
+      </annotatedElements>
+    </comment>
+    <comment Id="c3b22bd7-44d9-455b-a435-358a23e4ab5a">
+      <elementDefinition Id="11b5e434-2d1b-4388-90da-d459e5f7db8c" />
+      <body>被提炼的抽象</body>
+      <annotatedElements>
+        <classMoniker Id="feeb98b9-39df-40b3-97b7-56519a70374a" LastKnownName="RefinedAbstraction" />
+      </annotatedElements>
+    </comment>
+    <comment Id="5b1072df-e57d-4a31-93bd-f692626450ae">
+      <elementDefinition Id="92615860-800d-4af9-a0d3-f8945db2830c" />
+      <body>抽象</body>
+      <annotatedElements>
+        <classMoniker Id="299604fe-7b42-4d3c-9155-ad7ed49cd6f4" LastKnownName="Abstraction" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="bb092d54-330b-40d8-95d4-0b3c2bd4033e">
+      <profileInstance Id="1843a560-dca8-43cf-98cd-3d54244f5fe7" name="TextTemplateBindings">
+        <elementDefinition Id="6088a9d9-e73d-4209-808e-c1404477b774" />
+      </profileInstance>
+      <elementDefinition Id="0a1ceedc-5d6e-4799-a997-d58dd0265532" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="299604fe-7b42-4d3c-9155-ad7ed49cd6f4" name="Abstraction" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1bfc837f-dee2-40b3-8791-9ec4c6115177" />
+        <targetEnds>
+          <association Id="4a15a3be-816c-4365-8060-e30be6719e0b" isDerived="false" sourceEndRoleName="Abstraction" targetEndRoleName="Implementor" isLeaf="false" isAbstract="false">
+            <classMoniker Id="a64eec0a-115d-42e8-9128-93614a52f828" LastKnownName="Implementor" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bacf2b9c-64fd-4413-85f3-23a0a5282ca9" name="Abstraction" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="381454d2-83e5-4ca2-bbd8-3cc02c68e421" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6433e1c7-bdbb-4d8d-8522-89a99438d475" name="Implementor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="88d75421-f9a9-40e9-b59b-a942d2ac8a5b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8383335b-134b-4f47-88d6-3830c36bd9d8" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="c353d7d3-3c3c-41db-addb-ca0ab1164b01" name="Operation" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3f50a230-0b59-4615-be48-65a2714e4618" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a64eec0a-115d-42e8-9128-93614a52f828" name="Implementor" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1741d437-52ec-4ce7-9372-0e14bf4b109b" />
+        <ownedOperationsInternal>
+          <operation Id="7c1ce1c8-ab72-4e16-9934-4354ae7fb426" name="OperationImpl" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e7c62040-c73b-4fe4-930b-cffbff2160dc" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="feeb98b9-39df-40b3-97b7-56519a70374a" name="RefinedAbstraction" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c8e297ff-142a-4493-a3b4-6ae24080a419" />
+        <generalsInternal>
+          <generalization Id="da608c24-e0ce-4c95-8aae-1587b13843d2" isSubstitutable="false">
+            <classMoniker Id="299604fe-7b42-4d3c-9155-ad7ed49cd6f4" LastKnownName="Abstraction" />
+            <elementDefinition Id="65976173-581f-4458-ae46-09628ee2abb6" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="1d707a5c-dc29-48d0-88b0-e08693551f9c" name="Operation" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fa977061-6ae8-4ce6-a3c4-f3a922b1d8ed" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="0185d91e-df41-4e07-ae58-913bb7986046" name="ConcreteImplementorA" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9965f064-04de-46fc-b6a8-55c8cd1ed7c8" />
+        <generalsInternal>
+          <generalization Id="3621aa57-9fde-4e8e-bbd0-80f98cce55a0" isSubstitutable="false">
+            <classMoniker Id="a64eec0a-115d-42e8-9128-93614a52f828" LastKnownName="Implementor" />
+            <elementDefinition Id="4f9ffba2-7c0e-49cb-a692-279c0cf51762" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="e8b4950f-3dc5-41f1-bdc1-d97074008bf2" name="OperationImpl" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="349d32e9-4885-4ff2-abf1-e7e3bf48a7c7" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="7ff90ab8-fbfe-4244-9ba7-ed001228a042" name="ConcreteImplementorB" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0ac40312-324f-452c-a660-db35c2389ca5" />
+        <generalsInternal>
+          <generalization Id="48fa5e07-559a-4075-b597-95b71873a376" isSubstitutable="false">
+            <classMoniker Id="a64eec0a-115d-42e8-9128-93614a52f828" LastKnownName="Implementor" />
+            <elementDefinition Id="83f5915e-518a-4d1e-a600-1437f58e21f1" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="91ce58a9-cf06-4b6d-875e-9ceb174b6912" name="OperationImpl" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="857eb20e-d576-40c7-bd0e-2d8578d9c4f1" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="ceaa375f-3971-438e-90e4-77952cc09cc2" name="DesignPattern.ClassView">
+    <elementDefinition Id="eb0fd501-f10a-43ce-bedb-7510acc6e4c8" />
+    <profileInstances>
+      <packageHasProfileInstances Id="d28933fc-3e39-4ae1-9bf9-51dab65f817b">
+        <profileInstance Id="a49e6db7-4ae9-4170-89c7-46e3b08b6bac" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="a934adb2-7cbd-4e4a-9b81-c6e46d1624c5">
+        <profileInstance Id="e065e13a-0b18-4963-98d9-2af3a77d5b45" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

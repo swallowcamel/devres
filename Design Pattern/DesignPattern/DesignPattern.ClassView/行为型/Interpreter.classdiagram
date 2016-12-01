@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="04fbe272-3bcb-474b-a8ed-e6d764539bff" name="Interpreter(解释器模式)" linkedPackageId="b9919acd-aad8-4cef-a778-42a1f9c1b3c4" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="0b6a4b45-ac9a-4988-a3a4-b0dbb8257493">
+      <elementDefinition Id="54d934c9-3cdb-4646-b539-cf783dabd3ce" />
+      <body>包含解释器之外的一些全局信息</body>
+      <annotatedElements>
+        <classMoniker Id="52216620-05f4-4982-8cba-ed5f376b30fd" LastKnownName="Context" />
+      </annotatedElements>
+    </comment>
+    <comment Id="4a3f48fc-5d22-4b41-aaae-3e6d43f3deb8">
+      <elementDefinition Id="a5fad4f4-6af4-4cc8-85aa-dd34cc7005c5" />
+      <body>抽象表达式，声明一个抽象的解释操作，这个接口为抽象语法树中所有的节点所共享</body>
+      <annotatedElements>
+        <classMoniker Id="94ce4bbf-7e73-4f4a-92db-6322fdb436e3" LastKnownName="AbstractExpression" />
+      </annotatedElements>
+    </comment>
+    <comment Id="b3f436e4-9fc9-4381-ba96-2abe98894d9c">
+      <elementDefinition Id="336c3b03-0e65-4495-ab30-7498e0a5b7e0" />
+      <body>非终结符表达式，为文法中的非终结符实现解释操作。对文法中的每一条规则R1、R2……Rn都需要一个具体的非终结符表达式类</body>
+      <annotatedElements>
+        <classMoniker Id="1f7f9b74-597f-443d-94b5-a3ab7641609b" LastKnownName="NonterminalExpression" />
+      </annotatedElements>
+    </comment>
+    <comment Id="6ae7bfef-dcbd-4535-9133-98773ab9d86a">
+      <elementDefinition Id="7220aa0e-1beb-4482-a0e3-0d0bb3159548" />
+      <body>终结符表达式，实现与文法中的终结符相关联的解释操作。</body>
+      <annotatedElements>
+        <classMoniker Id="44e09dca-1b21-4a63-8689-3afe70c8c002" LastKnownName="TerminalExpression" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="e1ce86ce-942e-425b-bc81-a960a69fb6f1">
+      <profileInstance Id="ccfb2de2-5133-4a57-b89a-cbc648335035" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="fcba4c1a-ceae-4e22-81df-308d78481fb7">
+      <profileInstance Id="fd8abcf3-9a41-4a59-b36c-9bd69ce7eff9" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="94ce4bbf-7e73-4f4a-92db-6322fdb436e3" name="AbstractExpression" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9335f150-1a92-4608-a3c1-205f2f63fda5" />
+        <ownedOperationsInternal>
+          <operation Id="c3cec4b8-29ac-4d76-a7a8-1ac98c815685" name="Interpret" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8d96aaec-c5c6-4048-9360-74be1af3cb48" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5bfa7732-23b5-4e1a-8b72-3179e5417e3a" name="context" direction="In" isUnique="false">
+                  <elementDefinition Id="acc3a33b-733c-4a49-aa9d-ab5655744c4d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="765615c0-df79-4ed7-9159-61fbff6a57a0" LastKnownName="Context" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="44e09dca-1b21-4a63-8689-3afe70c8c002" name="TerminalExpression" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="80f400bc-55d4-4be0-8b55-52cfe263491c" />
+        <generalsInternal>
+          <generalization Id="1266b5d0-e5c0-4c4c-a3ab-9e42291815cb" isSubstitutable="false">
+            <classMoniker Id="94ce4bbf-7e73-4f4a-92db-6322fdb436e3" LastKnownName="AbstractExpression" />
+            <elementDefinition Id="009abde5-a3ac-41bc-b14b-9400f9cc7f3a" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="89a335bd-06c4-4d61-9f5a-2ab17fd3b56b" name="Interpret" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="65f710ce-22c5-479e-a416-a62b06157319" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6fbf1a53-4e27-4aad-ab36-293e9feb9cd5" name="context" direction="In" isUnique="false">
+                  <elementDefinition Id="0ac7b022-889e-42d3-b6e2-1c3259aa30bf" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="765615c0-df79-4ed7-9159-61fbff6a57a0" LastKnownName="Context" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="1f7f9b74-597f-443d-94b5-a3ab7641609b" name="NonterminalExpression" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7729667b-1e29-42ae-bd21-e3f31f172162" />
+        <generalsInternal>
+          <generalization Id="b7593573-418b-4b82-87ba-9a6b076ea490" isSubstitutable="false">
+            <classMoniker Id="94ce4bbf-7e73-4f4a-92db-6322fdb436e3" LastKnownName="AbstractExpression" />
+            <elementDefinition Id="6353b507-7886-405e-9dd7-f5cce62cefd0" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="67af5c80-a496-4a3b-ae08-1be1f7b09dda" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="94ce4bbf-7e73-4f4a-92db-6322fdb436e3" LastKnownName="AbstractExpression" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f2500aa3-327f-4312-90ea-4e52fa7c3af8" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="01322c48-f1d9-43ea-a24b-df3f413dd141" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="981e42a3-c898-423f-9a5a-c23217d215ac" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="11def002-9ce5-4fb9-8c9a-22bcaede6c9d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="bcfb45e9-31f0-4d44-a8f8-990f3459dd98" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="6057da74-04d9-4a88-8de9-a796cc5ab0e6" name="Interpret" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="abdb6382-7805-49fc-8c99-05abe3aef34c" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="0f312b2d-5edf-456f-a509-69d710312fd2" name="context" direction="In" isUnique="false">
+                  <elementDefinition Id="2ce2c85e-d2ee-4370-a48a-68577134e4db" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="765615c0-df79-4ed7-9159-61fbff6a57a0" LastKnownName="Context" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="52216620-05f4-4982-8cba-ed5f376b30fd" name="Context" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a92d8732-576c-4802-821f-03c287ec442e" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="88778312-b3a9-4684-8630-bcb5e2f00928" name="Client" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="32ad8faf-ec3a-4fce-b91d-06b9d107e5b5" />
+        <targetEnds>
+          <association Id="c8e749a8-df03-49db-945c-84e0cd6bdc29" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="52216620-05f4-4982-8cba-ed5f376b30fd" LastKnownName="Context" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="37f53bb5-1160-4ddf-8481-40c6790af592" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="06a8b280-8aad-4397-a8ec-63a99294aee3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e84e2db8-c608-4b78-b8ab-e9adbb919695" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="16be8570-5c98-4d8f-91e8-8a5a515c5162" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="804b3593-0e79-48b9-ada5-356129d5edf5" />
+          </association>
+          <association Id="1f939d86-77bc-4a16-974f-7b3051837d3c" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="94ce4bbf-7e73-4f4a-92db-6322fdb436e3" LastKnownName="AbstractExpression" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d163a0a7-08b8-4716-98a0-7aafac00a3fe" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c796b88e-3286-408e-81b8-12014752a046" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="95102076-855e-4aa7-a1a0-ebfaf2b3f7e5" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ff324b85-ed1b-46fe-9f91-c4be4a9b0bb4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5ba55854-d1ba-43d7-bf8d-ea5c62e937d3" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="765615c0-df79-4ed7-9159-61fbff6a57a0" name="Context" isAbstract="false" isLeaf="false" cachedFullName="DesignPattern.ClassView::Context">
+        <elementDefinition Id="da7a6cd0-4092-4003-bb7b-3a3e8764ba4c" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="b9919acd-aad8-4cef-a778-42a1f9c1b3c4" name="DesignPattern.ClassView">
+    <elementDefinition Id="eb0fd501-f10a-43ce-bedb-7510acc6e4c8" />
+  </package>
+</logicalClassDesignerModel>

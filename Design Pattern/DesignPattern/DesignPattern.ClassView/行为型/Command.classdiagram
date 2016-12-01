@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="bbf60a96-f5f6-4df7-8d3b-b50d832931f9" name="Command（命令模式）" linkedPackageId="0d48c241-8e1c-4dc6-9ced-c424a0b10d5f" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="15ffee78-b430-4731-bec3-dfd7f51ea0cb">
+      <elementDefinition Id="ef01493a-ed07-45e1-a8ac-77949447bf39" />
+      <body>用来声明执行操作的接口</body>
+      <annotatedElements>
+        <interfaceMoniker Id="f8443a35-7480-4aaf-9be2-e53a42b3c352" LastKnownName="Command" />
+      </annotatedElements>
+    </comment>
+    <comment Id="7c4bd6ee-745e-44fc-abcd-5e8bd09c9df4">
+      <elementDefinition Id="60defcbd-21d6-4654-9cae-f551dba69b7c" />
+      <body>将一个接收者对象绑定于一个动作，调用接收者相应的操作，以实现Execute</body>
+      <annotatedElements>
+        <classMoniker Id="f466bd99-442e-4e80-81bb-ee0909056cab" LastKnownName="ConcreteCommand" />
+      </annotatedElements>
+    </comment>
+    <comment Id="afc20b1c-8dbf-4219-b2bd-ad3a9e6d6d24">
+      <elementDefinition Id="98b1ce9b-984a-4f02-a552-d53684d73ab7" />
+      <body>知道如何实施与执行一个请求相关的操作，任何类都可能作为一个接收者</body>
+      <annotatedElements>
+        <classMoniker Id="af6c29bd-e17b-4ed2-a6a0-3fbb31c9048d" LastKnownName="Receiver" />
+      </annotatedElements>
+    </comment>
+    <comment Id="cb2699f3-dec0-4a6b-9e13-4d3db0fadeb2">
+      <elementDefinition Id="48a5383b-0047-4408-ace8-429b23adb6d0" />
+      <body>要求该命令执行这个请求</body>
+      <annotatedElements>
+        <classMoniker Id="25aa60f6-86c8-4711-8367-31e619c4e1db" LastKnownName="Invoker" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="4b1410f5-fc01-4c46-ac01-39aef7aa4feb">
+      <profileInstance Id="142e9914-1154-41f1-a5ff-9ad682a13e2c" name="TextTemplateBindings">
+        <elementDefinition Id="6088a9d9-e73d-4209-808e-c1404477b774" />
+      </profileInstance>
+      <elementDefinition Id="0a1ceedc-5d6e-4799-a997-d58dd0265532" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="f8443a35-7480-4aaf-9be2-e53a42b3c352" name="Command" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="957b8748-d8e0-4cfb-b473-5277cfc08450" />
+        <ownedOperations>
+          <operation Id="8c4d19d9-d8e1-4f60-a57b-4a7a1cfcd7b1" name="Execute" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e8c85b08-5378-4a81-a4d4-31d1791dcbb4" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f466bd99-442e-4e80-81bb-ee0909056cab" name="ConcreteCommand" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1f90bd0b-b85d-446e-81ba-0afd68927b91" />
+        <suppliersInternal>
+          <interfaceRealization Id="7342468a-6c2b-48d3-a46c-b84994dcf102">
+            <interfaceMoniker Id="f8443a35-7480-4aaf-9be2-e53a42b3c352" LastKnownName="Command" />
+            <elementDefinition Id="4b4306c0-d7a2-4b37-89b7-3b647ee38813" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association Id="12405aa8-fd89-4cdf-9fd1-f7ded92a8f85" isDerived="false" sourceEndRoleName="" targetEndRoleName="-receiver" isLeaf="false" isAbstract="false">
+            <classMoniker Id="af6c29bd-e17b-4ed2-a6a0-3fbb31c9048d" LastKnownName="Receiver" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c4be1714-1af8-486f-bd72-9df766b18c58" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="528f6fa6-ee2e-4887-a6bf-116a4cd786cc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dc35305a-2ec8-4a6f-9305-c5f20c458ac5" name="-receiver" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ab8cbe82-6ceb-4ce3-8988-aaaf5a2cfb4f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="365b2a00-bc04-44bf-9154-e042ac51ee45" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="643a8bff-5ce3-41bd-bf50-92bef0eb1667" name="receiver" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4e25a664-e867-4fb7-8eab-4a6cbd7967dd" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="5aa7c66b-8838-4a62-bc56-daa06341ae5b" LastKnownName="Receiver" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="196afce1-3389-41fb-93fa-3d77ce9dfb29" name="Execute" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a06bdd67-e4ed-4652-9df4-f86a6f8a3780" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="af6c29bd-e17b-4ed2-a6a0-3fbb31c9048d" name="Receiver" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0bb651c8-c837-4b0b-9b59-2f5daa594d6b" />
+        <ownedOperationsInternal>
+          <operation Id="b7b62680-dbbc-4098-a457-77ce269c06de" name="Action" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="dd00a512-e735-4eea-b7a8-058c9f4ea0b0" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="25aa60f6-86c8-4711-8367-31e619c4e1db" name="Invoker" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="cabf3e34-a52a-4db8-a6a8-9b55a6268415" />
+        <targetEnds>
+          <association Id="a56b21d9-c85d-419b-8281-5aa20ac0b5da" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="f8443a35-7480-4aaf-9be2-e53a42b3c352" LastKnownName="Command" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dbb09ad9-468e-4062-8ec1-b129393d1c92" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="36eddf4b-3568-42b0-b8a6-491c487b13e3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="558b452a-738f-4f83-be70-f00388cdb7c4" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="729d3b68-1dcc-46bd-9e45-3cfcf7cacf57" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="86654b02-50a5-487f-b266-44f45b61c448" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f3aa61f0-0035-4f7a-b2bf-705e65df1603" name="Client" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2f993c9a-7d7b-41b2-a62c-b23e1cbd45be" />
+        <suppliersInternal>
+          <dependency Id="d0e8f8a4-ee95-4dc6-88d6-11b65a89a000">
+            <classMoniker Id="25aa60f6-86c8-4711-8367-31e619c4e1db" LastKnownName="Invoker" />
+            <elementDefinition Id="ebf9cc1f-dab6-4894-bc83-fc7b39f584c1" />
+          </dependency>
+          <dependency Id="45220a70-69e0-45ce-91f3-964986af68cd">
+            <classMoniker Id="af6c29bd-e17b-4ed2-a6a0-3fbb31c9048d" LastKnownName="Receiver" />
+            <elementDefinition Id="18e225fa-44ed-4e85-a6fd-bf49d3d10b86" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="5aa7c66b-8838-4a62-bc56-daa06341ae5b" name="Receiver" isAbstract="false" isLeaf="false" cachedFullName="DesignPattern.ClassView::Receiver">
+        <elementDefinition Id="0bb651c8-c837-4b0b-9b59-2f5daa594d6b" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="0d48c241-8e1c-4dc6-9ced-c424a0b10d5f" name="DesignPattern.ClassView">
+    <elementDefinition Id="eb0fd501-f10a-43ce-bedb-7510acc6e4c8" />
+    <profileInstances>
+      <packageHasProfileInstances Id="0e546e5d-162e-407a-8e54-1e2152990047">
+        <profileInstance Id="3b064f1b-9c2c-48c5-8a76-8b95e1dbbb3c" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="6f14ed9a-499a-48b8-b7d8-81fe8d0e606d">
+        <profileInstance Id="cfa84164-d080-483b-9329-fe2b3598815e" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

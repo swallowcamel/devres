@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="7a07ac20-f90a-4302-a7fc-3d2c608e21ac" name="Builder（建造者模式）" linkedPackageId="0c77bbeb-c70a-4d8d-8ddf-a0757b18f978" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="e5fc0441-b678-4ec1-bb29-cce3ff73c5f2">
+      <elementDefinition Id="64842595-0dc6-4d28-84c6-017f6fcbeec3" />
+      <body>指挥者，构建一个使用Builder接口的对象。</body>
+      <annotatedElements>
+        <classMoniker Id="250b39e1-6267-4bb4-a432-bfd7e6284347" LastKnownName="Director" />
+      </annotatedElements>
+    </comment>
+    <comment Id="7c188b24-e529-408a-847d-b64f57ae3f85">
+      <elementDefinition Id="32ccdb61-ad6d-430b-9a2f-c2822e5918d8" />
+      <body>为创建一个Product各个部件而定义的抽象接口</body>
+      <annotatedElements>
+        <classMoniker Id="fa46d3e6-6da9-4fa2-811a-55c781bfd57a" LastKnownName="Builder" />
+      </annotatedElements>
+    </comment>
+    <comment Id="785a53a1-4190-4281-a917-0bb09a111368">
+      <elementDefinition Id="3e14a357-80b8-4641-b7ae-12db58acb9e6" />
+      <body>具体的产品</body>
+      <annotatedElements>
+        <classMoniker Id="b31c7da5-c4d4-419a-a0c5-93e92ad2902f" LastKnownName="Product" />
+      </annotatedElements>
+    </comment>
+    <comment Id="22cd92bc-421f-4c2f-9953-38e946481733">
+      <elementDefinition Id="49172369-279f-4660-985e-8e5a30d242b6" />
+      <body>具体建造者，实现Builder接口，构造和装配各个部件。</body>
+      <annotatedElements>
+        <classMoniker Id="c73fa278-070c-4c11-9aab-8f98e85c0cbb" LastKnownName="ConcreteBuilder1" />
+        <classMoniker Id="d0181ea2-487b-4a4b-9815-65f112ae6c07" LastKnownName="ConcreteBuilder2" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="6fc1d287-d881-4146-af54-88c4aae3f672">
+      <profileInstance Id="9eb3fe43-316a-4de7-bd1e-9303ae5c796f" name="TextTemplateBindings">
+        <elementDefinition Id="6088a9d9-e73d-4209-808e-c1404477b774" />
+      </profileInstance>
+      <elementDefinition Id="0a1ceedc-5d6e-4799-a997-d58dd0265532" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="250b39e1-6267-4bb4-a432-bfd7e6284347" name="Director" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="958047f5-2e7c-4935-a764-136cd33bde77" />
+        <targetEnds>
+          <association Id="5784087f-26e5-4bca-a564-1f597d686991" isDerived="false" sourceEndRoleName="Director" targetEndRoleName="-builder" isLeaf="false" isAbstract="false">
+            <classMoniker Id="fa46d3e6-6da9-4fa2-811a-55c781bfd57a" LastKnownName="Builder" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5fc499eb-07cf-4ce3-b961-59f043295849" name="Director" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="183ac9e9-a968-474e-b46f-4402a7b7dbb1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d1a4b046-8c0d-4921-89fc-9189a16fa145" name="-builder" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6984d1a6-2cfb-4432-a283-0d89988a72e7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c1fe0a36-b5af-4a00-8414-75ec4d345ab6" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="07cc4834-e9cd-4cf5-adf6-2e4a2c5f8d8d" name="Construct" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d2f71c5a-5a38-4f8b-a221-b17c37965b28" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="fa46d3e6-6da9-4fa2-811a-55c781bfd57a" name="Builder" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="caeb0d6a-0310-4da4-8c15-425dc8be5967" />
+        <ownedOperationsInternal>
+          <operation Id="af9fcace-3cc8-432d-bcdb-7ec788ce129e" name="BuildPartA" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5c5ac54f-ac4e-44c1-81ee-d15fe87a158f" />
+          </operation>
+          <operation Id="9ecf551b-ffdb-469f-b197-2d893e0d2026" name="BuildPartB" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="17155967-0786-46c0-b0e9-33520dd9095a" />
+          </operation>
+          <operation Id="33f0da55-f3dd-434d-9494-d7041a1684ec" name="GetResult" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fac923fb-2136-4dcc-be7d-1d1e019ea58b" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c73fa278-070c-4c11-9aab-8f98e85c0cbb" name="ConcreteBuilder1" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="04c468d1-4c0a-404e-bcbd-eb82f5fa65f2" />
+        <suppliersInternal>
+          <dependency Id="b4669ec8-c58d-4ab3-9275-89703aedd0ac">
+            <classMoniker Id="b31c7da5-c4d4-419a-a0c5-93e92ad2902f" LastKnownName="Product" />
+            <elementDefinition Id="288ec285-0897-4b98-8bac-a737d0d3c6fb" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="14124a34-82ee-482b-b917-2eaa0ab38ae5" isSubstitutable="false">
+            <classMoniker Id="fa46d3e6-6da9-4fa2-811a-55c781bfd57a" LastKnownName="Builder" />
+            <elementDefinition Id="d8e1d097-2191-4642-aa41-67062448ae52" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="a5b8d291-9c88-48c6-a178-c1886a93b881" name="BuildPartA" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a961712e-4595-42ca-9b89-9dea066a03e7" />
+          </operation>
+          <operation Id="53279d2a-8921-4b71-b9d4-de3d2daa18fd" name="GetResult" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2f806798-fdf7-4bb7-8a05-0d6009bc3072" />
+          </operation>
+          <operation Id="1c816e64-480d-4fd8-870e-19525d365b2d" name="BuildPartB" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="99730f49-da20-40b1-9d18-57a5c76e06f1" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b31c7da5-c4d4-419a-a0c5-93e92ad2902f" name="Product" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1c119822-f7ce-4ed1-8d40-f7d033c385ee" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d0181ea2-487b-4a4b-9815-65f112ae6c07" name="ConcreteBuilder2" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="56b0bf27-564b-49ed-96a7-d3e2db9589d8" />
+        <suppliersInternal>
+          <dependency Id="2692426f-fc4c-4fa8-95af-76c1a69916b2">
+            <classMoniker Id="b31c7da5-c4d4-419a-a0c5-93e92ad2902f" LastKnownName="Product" />
+            <elementDefinition Id="e5e93603-51f5-4f87-937e-766e95fe95cc" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="ad75d32d-92a0-4750-9650-21031d5b748f" isSubstitutable="false">
+            <classMoniker Id="fa46d3e6-6da9-4fa2-811a-55c781bfd57a" LastKnownName="Builder" />
+            <elementDefinition Id="ff42d1f0-a1de-4f68-8d11-f0112f09d9f7" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="b50a4315-5564-4844-a1a9-13ed2bf3abf0" name="BuildPartA" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d3712254-3feb-4f26-8e56-1115f479e5e0" />
+          </operation>
+          <operation Id="86a7b518-2f79-4f46-a3ac-b44e627cd452" name="GetResult" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="40c6aa67-1f75-4e1e-b528-656fb9f6c8c3" />
+          </operation>
+          <operation Id="aca058a3-f747-42fc-a4b7-9ee2db2269da" name="BuildPartB" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="9a363711-fde8-4929-8256-0b69c2a46c0f" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="0c77bbeb-c70a-4d8d-8ddf-a0757b18f978" name="DesignPattern.ClassView">
+    <elementDefinition Id="eb0fd501-f10a-43ce-bedb-7510acc6e4c8" />
+    <profileInstances>
+      <packageHasProfileInstances Id="d624eab7-c3b2-484e-a78c-2fd618a70610">
+        <profileInstance Id="e491dbda-526b-4b76-a681-7f9d308e663e" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="58924cb8-6ff7-490e-a09a-18959255dbbb">
+        <profileInstance Id="7ba60787-a59a-4819-8b50-c698cbf5193f" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

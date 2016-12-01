@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="ddce2656-62ca-47cb-a66b-0ab307431fd7" name="Proxy（代理模式）" linkedPackageId="02ac09b7-1931-4fa9-a292-8a3dd552b723" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="110e6210-7d2f-4c5f-9fd8-3fa5f4a54424">
+      <elementDefinition Id="2852ada7-3797-4fc0-81be-ae4aae8d2ce4" />
+      <body>定义了RealSubject和Proxy的公用接口，这样就在任何使用RealSubject的地方都可以使用Proxy</body>
+    </comment>
+    <comment Id="7847cbb5-6385-4632-83b1-330305730816">
+      <elementDefinition Id="21108c4c-d600-4e36-9449-56ba5aeeb8a6" />
+      <body>RealSubject 定义Proxy所代表的真实实体</body>
+    </comment>
+    <comment Id="7ad751e6-da0c-42f7-a100-824f4c0c9a37">
+      <elementDefinition Id="3f65af3f-d27b-4051-9d47-47ce5e4bc23a" />
+      <body>保存一个引用使得代理可以访问一个实体，
+并提供一个与Subject接口相同的接口，
+这样代理就可以用来替代实体。</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="923b5a1e-5ab1-4bf0-8710-f81fb19e020b">
+      <profileInstance Id="421a77b5-93c1-49dd-ae4d-8ef96273b8ea" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="d9719142-0cc4-4e71-b7d0-a8cdff11947a">
+      <profileInstance Id="6de48228-4b88-461c-b764-e70405e5e7d5" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="560af319-a35c-4d10-8710-88ae39ab0919" name="Proxy" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2e95717c-d9cb-493f-90c4-ec5e41a228c7" />
+        <generalsInternal>
+          <generalization Id="995b9285-a588-4240-ac93-d49a5727b412" isSubstitutable="false">
+            <classMoniker Id="5ca63a93-d086-4685-ae71-329938ba1f61" LastKnownName="Subject" />
+            <elementDefinition Id="3f010719-5847-41c3-ad8a-001e9dd3402b" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="e4d0ae40-643f-4c76-8ef8-603e4fbd86b0" isDerived="false" sourceEndRoleName="Proxy" targetEndRoleName="-realSubject" isLeaf="false" isAbstract="false">
+            <classMoniker Id="2e32dd7b-25dd-4975-b4cc-070c850f11f3" LastKnownName="RealSubject" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="61c43485-6f53-4cd6-b6d6-947b94e9a90d" name="Proxy" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5954fc87-c46f-4de3-a39e-5a5076f13f72" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8883379f-5669-420c-9bb7-51f5395af6ff" name="-realSubject" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1bf2a686-2e7f-4719-9063-20d33b4603c6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="05fdd879-ae59-48ed-90b7-2b0a00548234" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="ac1c6d8b-47d5-49d8-b0c6-f06fa6d34753" name="Request" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="eee283cc-2ba5-4f5b-9c3b-38c6366d204d" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="2e32dd7b-25dd-4975-b4cc-070c850f11f3" name="RealSubject" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="033fe984-170b-4a64-9ce0-8bbd04da4414" />
+        <generalsInternal>
+          <generalization Id="d261747e-e807-450b-833f-63fb2baf2085" isSubstitutable="false">
+            <classMoniker Id="5ca63a93-d086-4685-ae71-329938ba1f61" LastKnownName="Subject" />
+            <elementDefinition Id="80735215-9ac5-449b-aa51-99806993b7fa" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="4c9f948e-5b48-49a0-b25f-3cd0c8a8987a" name="Request" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="bf9298c9-4a31-4b5c-855f-f1e850fabfd0" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="555e0a87-92e8-43b8-9e83-f6b127c794d5" name="Client" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="28d3f746-76fa-496e-960f-7b162409f212" />
+        <targetEnds>
+          <association Id="eb0c8512-25e4-4a58-b590-b62e977f6223" isDerived="false" sourceEndRoleName="Client" targetEndRoleName="Subject" isLeaf="false" isAbstract="false">
+            <classMoniker Id="5ca63a93-d086-4685-ae71-329938ba1f61" LastKnownName="Subject" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1407fba1-4430-45c1-825d-408a44dddefd" name="Client" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="fd0dfaad-16bb-4bc3-8800-15e9cd5667ae" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="802d6f66-6718-4cc8-8d81-af7e7aee1a1b" name="Subject" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3f6fdccb-8079-4c69-a21c-a54cccb5eb6f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4636dfec-aceb-42de-b549-7ec0341277a4" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5ca63a93-d086-4685-ae71-329938ba1f61" name="Subject" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="44b53d06-fd15-4362-ac92-eafde64361cc" />
+        <ownedOperationsInternal>
+          <operation Id="7d0fff4e-4d91-4109-a66c-34352d4964e4" name="Request" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ce98b30c-e67c-4dac-bf87-182bbc480729" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="02ac09b7-1931-4fa9-a292-8a3dd552b723" name="DesignPattern.ClassView">
+    <elementDefinition Id="eb0fd501-f10a-43ce-bedb-7510acc6e4c8" />
+  </package>
+</logicalClassDesignerModel>

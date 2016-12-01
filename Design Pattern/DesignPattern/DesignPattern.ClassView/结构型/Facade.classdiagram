@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="fbdd4a65-6e02-4ca3-8219-79a1908b5d27" name="Facade（外观模式）" linkedPackageId="068c5857-7252-4dbb-a15a-bba25252d4ed" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="60a00090-48c0-4651-b558-d3263ac33157">
+      <elementDefinition Id="9bb0d428-39fb-4321-8cc3-e3e4442136a4" />
+      <body>知道哪些子系统负责请求，
+将客户的请求代理给适当的子系统对象。
+
+外观类需要了解所有子系统的方法或属性以便于组合调用</body>
+      <annotatedElements>
+        <classMoniker Id="078eaefd-b7c5-4e27-b2df-e607bdc6e283" LastKnownName="Facade" />
+      </annotatedElements>
+    </comment>
+    <comment Id="acab363e-ae2e-4fd3-a58b-80fbc6b96221">
+      <elementDefinition Id="2449525a-1d0d-43ba-a888-12c03da0ac2f" />
+      <body>SubSystemClasses 子系统类集合，
+实现子系统的功能，处理Facade对象指派的任务。
+注意：子类中没有Facade的任何信息即，没有 Facade 的引用。</body>
+      <annotatedElements>
+        <packageMoniker Id="49c494f5-feae-445f-8112-3e08eec846e1" LastKnownName="子系统类集合" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="83620f06-a5bf-4c13-9ee6-34788ffb06ea">
+      <profileInstance Id="ec389d36-52e4-484f-902a-a85119584656" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="f8c16746-a1e4-44a7-b499-1a740ed673d6">
+      <profileInstance Id="e90a787c-1cbf-4087-9f5a-31cd59dc5bde" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="078eaefd-b7c5-4e27-b2df-e607bdc6e283" name="Facade" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="95d460e3-8cf6-4bd2-87dc-acb5ee6275ed" />
+        <targetEnds>
+          <association Id="74217380-2528-453a-b445-a2da85f6ca61" isDerived="false" sourceEndRoleName="Facade" targetEndRoleName="SubSystemOne" isLeaf="false" isAbstract="false">
+            <classMoniker Id="f5056853-b793-43f8-9d3b-2982998b4f65" LastKnownName="SubSystemOne" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cffbc814-30c6-4df1-b4ce-fd527808a4c4" name="Facade" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b77da800-e307-470f-96ee-8f0d12cb7f90" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d96cdb2d-b15d-459e-bb1e-216977033a17" name="SubSystemOne" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="55b32872-6979-4079-9665-6a8ea24de33f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e5c4a901-be03-4ece-9b0b-af75c6a08e51" />
+          </association>
+          <association Id="58a920c6-ede9-4522-bb85-c7f1363ec8da" isDerived="false" sourceEndRoleName="Facade" targetEndRoleName="SubSystemTwo" isLeaf="false" isAbstract="false">
+            <classMoniker Id="1f5bda54-a901-4333-b186-50f2afc7d7f9" LastKnownName="SubSystemTwo" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="599a43f9-9157-41e3-842c-547aabd124c5" name="Facade" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7855c3d4-1ddb-4586-bf27-ba4975e31f62" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ed7056b3-e78f-4ee3-967c-148b09dc32c7" name="SubSystemTwo" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ece75458-0292-4ec3-ad1b-e6bf27d993d6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="fd7fd888-a662-4708-b24d-438658c2e0e9" />
+          </association>
+          <association Id="902113aa-52b5-4a12-a06a-6d82cb2aa633" isDerived="false" sourceEndRoleName="Facade" targetEndRoleName="SubSystemThree" isLeaf="false" isAbstract="false">
+            <classMoniker Id="08645366-b039-4407-abb9-68246c72a4cb" LastKnownName="SubSystemThree" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="914cd20e-b86e-4039-bbd4-06c3f8ea4550" name="Facade" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ca6b7577-6f7b-4bea-81a5-e1a115c0709b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3a7795c0-09e3-4687-b132-51edc5138c89" name="SubSystemThree" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a9713cc6-0e65-4f4b-86b3-a848db58ebec" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3cb22c0c-c39b-473d-bf09-815fe1dc9ddb" />
+          </association>
+          <association Id="30cbb15a-fc95-4c97-824b-1e7aa88dbe5d" isDerived="false" sourceEndRoleName="Facade" targetEndRoleName="SubSystemFour" isLeaf="false" isAbstract="false">
+            <classMoniker Id="04941c51-267d-4420-9ade-351886426d9b" LastKnownName="SubSystemFour" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="56a747ed-c05c-4de9-9690-7fd16fa049b9" name="Facade" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0ed3ce5e-5a19-42e1-928b-7ef05d8f40e2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="405965fb-6cf6-4ff1-af28-29aa493af4c7" name="SubSystemFour" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9d4e7fb7-1f97-4acf-b30a-485cea620fde" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="49ab31bc-ad79-48df-9a78-c510360dcbf2" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="012d433a-70a9-4dcc-ad7e-c756ea6c4153" name="MethodA" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8a4f95a1-64ce-4d5c-8e15-da449796c6f1" />
+          </operation>
+          <operation Id="75331f8c-c234-4b92-9a54-a20e909043d0" name="MethodB" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5fdad2f2-3a88-4921-9fd8-7fa2ff0521c6" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d5f478b3-2aa1-4638-8b9e-884c153f2d91" name="Client" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0032cb9f-26be-4320-9fda-18f0e881780a" />
+        <targetEnds>
+          <association Id="22cc941b-8db5-4372-86d7-a020738f33ef" isDerived="false" sourceEndRoleName="Client" targetEndRoleName="Facade" isLeaf="false" isAbstract="false">
+            <classMoniker Id="078eaefd-b7c5-4e27-b2df-e607bdc6e283" LastKnownName="Facade" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e1eb5234-5cdf-4643-9ee1-bcbdc6b1ac02" name="Client" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2d4c3d83-b2f1-4eef-ab9e-0bf40746e9df" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3f6c3e9d-9254-451e-a773-acd728e489e1" name="Facade" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="16268da8-9036-44ce-bb73-3931b63eb53c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d2024596-252b-405a-a2bd-9cfefb6b8a66" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="49c494f5-feae-445f-8112-3e08eec846e1" name="子系统类集合">
+        <elementDefinition Id="098a6e59-e459-48f7-948c-dbbfcae79457" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="f5056853-b793-43f8-9d3b-2982998b4f65" name="SubSystemOne" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="a8a1eb2d-4d28-4c35-bfe2-5f746efd259d" />
+              <ownedOperationsInternal>
+                <operation Id="f9f0b3e1-25d6-4ab0-b770-64368459f699" name="MethodOne" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="3799cd0b-4a2a-4116-938b-f16a92fa115e" />
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="1f5bda54-a901-4333-b186-50f2afc7d7f9" name="SubSystemTwo" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="29df0992-44e9-45a1-b108-5f5409663179" />
+              <ownedOperationsInternal>
+                <operation Id="f841d04a-2c47-4e25-888b-6a7fa18800e4" name="MethodTwo" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="5e11f94e-44d8-413a-9e9e-b7187ef7b317" />
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="08645366-b039-4407-abb9-68246c72a4cb" name="SubSystemThree" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="4d422935-5396-4286-969b-a7da9604ed6f" />
+              <ownedOperationsInternal>
+                <operation Id="a0464b48-cd56-4611-a5ea-418a59de8d25" name="MethodThree" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="658cb0a3-68bc-475a-b233-a092f9bb52a4" />
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="04941c51-267d-4420-9ade-351886426d9b" name="SubSystemFour" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="b350f9f8-a4de-4df1-9a2e-601e5d3d26d5" />
+              <ownedOperationsInternal>
+                <operation Id="f10d6015-0bf2-4243-b506-37dc2dfebd79" name="MethodFour" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="cb98560c-3bd8-4c80-8011-4b4fff931c6c" />
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+  </packagedElements>
+  <package Id="068c5857-7252-4dbb-a15a-bba25252d4ed" name="DesignPattern.ClassView">
+    <elementDefinition Id="eb0fd501-f10a-43ce-bedb-7510acc6e4c8" />
+  </package>
+</logicalClassDesignerModel>

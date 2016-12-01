@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="f7c6ae25-82a5-4fcd-8e65-d6839380df1f" name="Adapter（适配器模式）" linkedPackageId="2f81348f-fd70-46ae-9913-4e40bbcf4eb4" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="bb918670-e5c5-4dd6-8fb1-0f19cd12f8af">
+      <elementDefinition Id="596edb38-d52e-4dc4-81a0-f3d8f241b111" />
+      <body>这是客户所期待的接口。目标可以是具体的或抽象的类，也可以是接口。</body>
+      <annotatedElements>
+        <classMoniker Id="77cb5456-7228-40d2-9a5b-610ea57183a6" LastKnownName="Target" />
+      </annotatedElements>
+    </comment>
+    <comment Id="1d828799-5f03-48a6-9d3c-46cfa8ea6b70">
+      <elementDefinition Id="9165af76-b7e1-4ed7-bd0e-f5130d8b05c8" />
+      <body>需要适配的类</body>
+      <annotatedElements>
+        <classMoniker Id="378ecc13-50e7-40c4-86d8-88bbd46be6b9" LastKnownName="Adaptee" />
+      </annotatedElements>
+    </comment>
+    <comment Id="c1b08bb6-99fa-42ca-b46c-72bb95a037f3">
+      <elementDefinition Id="dc61d09d-cd0d-4ce8-9366-92a2b397a057" />
+      <body>通过在内部包装一个Adaptee对象把源接口转换成目标接口</body>
+      <annotatedElements>
+        <classMoniker Id="f6a52f66-1dc9-4de4-bc99-053b4727d81f" LastKnownName="Adapter" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="adc6ba8b-8afa-4a4e-82c6-d4dd9cbe9d15">
+      <profileInstance Id="7157dbf1-432d-4edd-bbdb-df9d0c8a61b9" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="ffde433c-952a-41f7-89fd-e0632a17b46e">
+      <profileInstance Id="cccf9ea8-3b07-496b-b4f7-915fafb804e9" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="42f470ca-e6cb-43ec-9e5d-2553f4e706e4" name="Client" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="fa0de7e6-d123-45c8-bf9c-5640f07ea8f6" />
+        <targetEnds>
+          <association Id="12753e1d-3476-432d-baee-9761a53c91c3" isDerived="false" sourceEndRoleName="" targetEndRoleName="-target" isLeaf="false" isAbstract="false">
+            <classMoniker Id="77cb5456-7228-40d2-9a5b-610ea57183a6" LastKnownName="Target" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3bb9543e-eab2-4552-a312-a27810f1d030" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="80fed959-db53-448e-92b8-cac26cb0d090" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="56b94baa-11a9-45cf-aa9b-733b80d0bdfe" name="-target" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="bdb43d89-1c65-42bc-9bb5-739abc727f61" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="69517d06-7071-4b8b-9022-8ec46be04362" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="77cb5456-7228-40d2-9a5b-610ea57183a6" name="Target" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2ed15be3-6023-4962-bf41-e5d80234ad85" />
+        <ownedOperationsInternal>
+          <operation Id="1cd9dc3d-998c-46fc-834d-37c071a7a344" name="Request" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="29347061-1f76-4acf-9b8b-c24c992ac56e" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f6a52f66-1dc9-4de4-bc99-053b4727d81f" name="Adapter" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d6ca803c-c74f-417f-a4c3-841e96071d40" />
+        <generalsInternal>
+          <generalization Id="38df0531-6425-4608-850b-bfc7e2254dae" isSubstitutable="false">
+            <classMoniker Id="77cb5456-7228-40d2-9a5b-610ea57183a6" LastKnownName="Target" />
+            <elementDefinition Id="8cea368c-e71c-40f4-820b-fa0bd234f9cf" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="bfb23955-45e4-4fb4-9fd4-50d48743a48e" isDerived="false" sourceEndRoleName="" targetEndRoleName="-adaptee" isLeaf="false" isAbstract="false">
+            <classMoniker Id="378ecc13-50e7-40c4-86d8-88bbd46be6b9" LastKnownName="Adaptee" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="717345cc-8f88-417a-a37c-b77c5ffd0d0c" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7c2dbdfd-c7cf-4255-a947-707297958363" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b7a4a13d-24ee-40f4-94c6-4bf1769f0c8a" name="-adaptee" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="76d0b5d2-6a8e-4062-bbed-55bfae6d5255" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="08e420bd-81bb-402e-8f57-e2ad545218e7" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="98feb913-0975-45eb-ba87-66a87ea059fe" name="Request" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="91e90511-5204-4979-8eed-0c3ddebaea9a" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="378ecc13-50e7-40c4-86d8-88bbd46be6b9" name="Adaptee" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d9dce3c6-8898-46b2-a112-3dba10bde699" />
+        <ownedOperationsInternal>
+          <operation Id="b9e1f29d-ed12-4a85-9856-6bca1dbb854d" name="SpecificRequest" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="165b4d61-c1ff-4a59-8b55-364e15e02c8c" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="2f81348f-fd70-46ae-9913-4e40bbcf4eb4" name="DesignPattern.ClassView">
+    <elementDefinition Id="eb0fd501-f10a-43ce-bedb-7510acc6e4c8" />
+  </package>
+</logicalClassDesignerModel>

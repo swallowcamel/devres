@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DesignPattern.AbstractFactory.AbstractFactory">
+    <Position X="8.5" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>AbstractFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.AbstractFactory.ConcreteFactory1">
+    <Position X="7.5" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>ConcreteFactory1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.AbstractFactory.ConcreteFactory2">
+    <Position X="9.5" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>ConcreteFactory2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.AbstractFactory.AbstractProductB">
+    <Position X="3" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractProductB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.AbstractFactory.ProductB1">
+    <Position X="5.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProductB1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.AbstractFactory.ProductB2">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProductB2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.AbstractFactory.Client">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <AssociationLine Name="_productB" Type="DesignPattern.AbstractFactory.AbstractProductB" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.375" Y="2.75" />
+        <Point X="1.375" Y="1.875" />
+        <Point X="3" Y="1.875" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAI=</HashCode>
+      <FileName>Client.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_productB" />
+      <Field Name="_productA" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DesignPattern.AbstractFactory.AbstractProductA">
+    <Position X="3.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractProductA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.AbstractFactory.ProductA1" Collapsed="true">
+    <Position X="5.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProductA1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.AbstractFactory.ProductA2" Collapsed="true">
+    <Position X="5.5" Y="4.75" Width="1.5" />
+    <InheritanceLine Type="DesignPattern.AbstractFactory.AbstractProductA" FixedToPoint="true">
+      <Path>
+        <Point X="4" Y="4.634" />
+        <Point X="4" Y="5.25" />
+        <Point X="5.5" Y="5.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProductA2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9.75" />
+</ClassDiagram>

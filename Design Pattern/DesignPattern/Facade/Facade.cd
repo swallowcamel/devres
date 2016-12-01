@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="外观类需要了解所有子系统的方法或属性以便于组合调用">
+    <Position X="5.447" Y="0.5" Height="0.75" Width="1.7" />
+  </Comment>
+  <Class Name="DesignPattern.Facade.Facade">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <AssociationLine Name="_subSystemOne" Type="DesignPattern.Facade.SubSystemOne" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.75" Y="1.267" />
+        <Point X="1.657" Y="1.267" />
+        <Point X="1.657" Y="2.625" />
+        <Point X="1.625" Y="2.625" />
+        <Point X="1.625" Y="3" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.879" Y="0.523" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="_subSystemTwo" Type="DesignPattern.Facade.SubSystemTwo" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.75" Y="1.648" />
+        <Point X="3.188" Y="1.648" />
+        <Point X="3.188" Y="3" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-1.657" Y="0.234" Height="0.189" Width="1.618" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="_subSystemThree" Type="DesignPattern.Facade.SubSystemThree">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.16" Y="0.159" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="_subSystemFour" Type="DesignPattern.Facade.SubSystemFour" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.25" Y="1.218" />
+        <Point X="10.531" Y="1.218" />
+        <Point X="10.531" Y="2.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.154" Y="0.095" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAgAAAAAEABAAADAAAAAAAAA=</HashCode>
+      <FileName>Facade.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_subSystemOne" />
+      <Field Name="_subSystemTwo" />
+      <Field Name="_subSystemThree" />
+      <Field Name="_subSystemFour" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DesignPattern.Facade.SubSystemOne">
+    <Position X="0.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SubSystemOne.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Facade.SubSystemTwo">
+    <Position X="2.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SubSystemTwo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Facade.SubSystemThree">
+    <Position X="6.75" Y="2.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SubSystemThree.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Facade.SubSystemFour">
+    <Position X="9.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SubSystemFour.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Facade.Program" Collapsed="true">
+    <Position X="9.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9.75" />
+</ClassDiagram>

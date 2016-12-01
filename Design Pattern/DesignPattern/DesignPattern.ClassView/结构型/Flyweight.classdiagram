@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="528798dd-23cf-49ac-9e79-892b94ec0964" name="Flyweight(享元模式)" linkedPackageId="2de28476-bdb4-48da-949a-a37a66f357f9" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="d625c9e9-5fba-40f8-a5ce-f05b1e1fa8c8">
+      <elementDefinition Id="b17287a7-8d0e-4a0b-9f2e-478cd5500f67" />
+      <body>享元工厂，用来创建并管理Flyweight对象。它主要是用来确保合理地共享Flyweight，当用户请求一个Flyweight时，FlyweightFactory对象提供一个已创建地实例或者创建一个（如果不存在的话）</body>
+      <annotatedElements>
+        <classMoniker Id="54fa39e3-3eaa-4d90-a24c-fe23094fbb3b" LastKnownName="FlyweightFactory" />
+      </annotatedElements>
+    </comment>
+    <comment Id="77942650-c9bc-4cab-a987-1f079d455e5e">
+      <elementDefinition Id="528b65ea-066b-436f-a238-c821a2b732e3" />
+      <body>所有具体享元类的超类或接口，通过这个接口Flyweight可以接受并作用于外部状态</body>
+      <annotatedElements>
+        <classMoniker Id="acfe8978-a621-4a3f-b899-1cc81ddcd174" LastKnownName="Flyweight" />
+      </annotatedElements>
+    </comment>
+    <comment Id="3dee78da-c615-45e1-9f9b-d9b84ae05aa0">
+      <elementDefinition Id="7af73a1a-2abd-44d1-b5f0-f7faa8e8d195" />
+      <body>继承Flyweight超类或实现Flyweight接口，并为内部状态增加存储空间</body>
+      <annotatedElements>
+        <classMoniker Id="d36fea5d-6fe2-4afa-935d-7ed8a81b2cd7" LastKnownName="ConcreteFlyweight" />
+      </annotatedElements>
+    </comment>
+    <comment Id="70024901-5336-4124-be90-e6f5fa4d0b8c">
+      <elementDefinition Id="2ba808d2-1282-46fe-aef0-f2919fbc9b69" />
+      <body>指那些不需要共享的Flyweight子类。因为Flyweight接口共享成为可能，但它并不强制共享</body>
+      <annotatedElements>
+        <classMoniker Id="72fc950a-731f-4e03-b33e-a1f67d819548" LastKnownName="UnSharedConcreteFlyweight" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="1d51c04b-5dbc-4a49-ad96-a8fef07ffced">
+      <profileInstance Id="56c7fb1a-1d3b-4bb9-83ef-e13efa943f98" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="22e12a95-164d-4bac-839e-35ea68734654">
+      <profileInstance Id="a3fb7f8a-e7b3-43de-9b58-1a37c5d21209" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="acfe8978-a621-4a3f-b899-1cc81ddcd174" name="Flyweight" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="63189b07-d6cb-4ebd-ab3a-80faad226505" />
+        <ownedOperationsInternal>
+          <operation Id="76445ffb-555c-4def-9a7e-5091b80f1068" name="Operation" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="366e0b03-663c-4eac-9da4-56b2af657ef6" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5c530db1-eec7-4bf7-a27e-5e3a05316a81" name="extrinsicstate" direction="In" isUnique="false">
+                  <elementDefinition Id="e3c49b3b-00d6-43b5-b54f-cd948166c50a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="48a23b7c-7c86-4abc-8bc9-6e100931eace" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="54fa39e3-3eaa-4d90-a24c-fe23094fbb3b" name="FlyweightFactory" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8e59bb96-8e9f-4f29-ab9f-3bde9bdb59e4" />
+        <targetEnds>
+          <association Id="9e9a1696-6607-4e89-93ab-79e6aec655d0" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" name="-flyweights" isAbstract="false">
+            <classMoniker Id="acfe8978-a621-4a3f-b899-1cc81ddcd174" LastKnownName="Flyweight" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7bd5071d-92fd-4a4c-bee1-5b79bcf89d14" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="eb659e89-bdeb-4f97-9c3b-9f4c345f6a4c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f27f0515-758b-44dc-a323-1eeef4998d8c" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8de68168-ceb4-4d2e-b788-dddc6781b592" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3023041e-52a7-43cb-813f-4ccaae86a5be" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="ad004e9f-76e9-4172-b03d-f9d4ec873555" name="GetFlyweight" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f6c6376c-172c-4282-b099-8ad680de17ce" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="47b6a614-b174-433e-b101-b5fd5d605aab" direction="Return" isUnique="false">
+                  <elementDefinition Id="382a798c-d5a3-4716-a858-5d2dad82a94e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e0517dfd-2681-4af7-945f-b43bcf5e944a" LastKnownName="Flyweight" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="0103ad75-9be8-4f63-9830-241acc347bb3" name="key" direction="In" isUnique="false">
+                  <elementDefinition Id="fdc3e773-780c-4594-8059-01bf16e6ec29" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="48a23b7c-7c86-4abc-8bc9-6e100931eace" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="48a23b7c-7c86-4abc-8bc9-6e100931eace" name="int" isAbstract="false" isLeaf="false" cachedFullName="int">
+        <elementDefinition Id="0a555b9d-3dee-46e0-a9c6-bdcc3e573b83" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="e0517dfd-2681-4af7-945f-b43bcf5e944a" name="Flyweight" isAbstract="false" isLeaf="false" cachedFullName="DesignPattern.ClassView::Flyweight">
+        <elementDefinition Id="63189b07-d6cb-4ebd-ab3a-80faad226505" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d36fea5d-6fe2-4afa-935d-7ed8a81b2cd7" name="ConcreteFlyweight" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4ed41957-2c68-41dc-a579-1d898e213ac6" />
+        <generalsInternal>
+          <generalization Id="2e5a6240-3f6d-4b82-bca0-8400c488e4be" isSubstitutable="false">
+            <classMoniker Id="acfe8978-a621-4a3f-b899-1cc81ddcd174" LastKnownName="Flyweight" />
+            <elementDefinition Id="1b2cdfac-49bd-47d4-a15b-803e9a3298ea" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="248bc0f8-fffb-4615-90fd-572c0cc0d193" name="Operation" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="10361f78-d6e0-4d5f-87be-0f1790f003d8" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="08476062-7e50-4663-9e52-1d413af029d7" name="extrinsicstate" direction="In" isUnique="false">
+                  <elementDefinition Id="18e52299-ae79-4fe4-9a98-9cd6d7bb362e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="48a23b7c-7c86-4abc-8bc9-6e100931eace" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="72fc950a-731f-4e03-b33e-a1f67d819548" name="UnSharedConcreteFlyweight" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ef907715-d79c-4215-891e-7f0b54d637f8" />
+        <generalsInternal>
+          <generalization Id="0446b94e-7a31-419d-9797-6298c1740794" isSubstitutable="false">
+            <classMoniker Id="acfe8978-a621-4a3f-b899-1cc81ddcd174" LastKnownName="Flyweight" />
+            <elementDefinition Id="5fba9555-29c0-4e44-ba9d-1faba1d126f0" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="eb9a05e6-c48e-47c7-921e-5d83f474a4d7" name="Operation" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6b12905f-73ba-411d-9539-5b6b6d86a193" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="428d32a2-8190-4fcb-9cab-6195dcd878c8" name="extrinsicstate" direction="In" isUnique="false">
+                  <elementDefinition Id="f834b78e-b759-4960-a77b-c9918918f8fd" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="48a23b7c-7c86-4abc-8bc9-6e100931eace" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="9ea2c13d-a427-491c-b294-1209ab9d0ad6" name="Client" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="cfd37591-fb94-4b5f-8f46-6480e8f192cc" />
+        <targetEnds>
+          <association Id="e087c316-7984-460e-8b6b-5946cb846b0d" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="54fa39e3-3eaa-4d90-a24c-fe23094fbb3b" LastKnownName="FlyweightFactory" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="57b52d77-5387-40e7-8164-fea8c2e6ea91" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="18c7cede-a4d5-47a6-869c-8e0419f4bd92" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b9cd6371-0a15-4cec-9579-c56b504ebd4d" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b0e56651-566d-44b1-956c-68febae2e1dd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="fc4f2ac6-4240-45de-823c-8d55d2493be3" />
+          </association>
+          <association Id="6d509b05-5bba-4906-a857-3ecd1f65e0dd" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="d36fea5d-6fe2-4afa-935d-7ed8a81b2cd7" LastKnownName="ConcreteFlyweight" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="17bbda46-4378-4846-b636-84c4c545d6b0" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f38f3244-b036-47a1-af82-6b783335a397" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8611557d-4854-4774-8e33-bc848f945598" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d1cad49e-5932-4f24-82d0-46aa5875aca6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f3705910-0546-4bd7-90ef-c654da7a8c29" />
+          </association>
+          <association Id="8b8e85b9-82d3-46c8-9de2-7fbcb227667a" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="72fc950a-731f-4e03-b33e-a1f67d819548" LastKnownName="UnSharedConcreteFlyweight" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9d876f59-1e62-4b3c-b662-dfea37ef231c" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="272da3f5-6869-442a-a4da-92a8ebe5cd65" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8b32d6cd-a424-408f-b79c-42e6f9485d98" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5916dbaa-0f9c-4c67-a339-114f9df58fa3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="19b1cfa7-ddbc-4bcf-9a89-1d9a66c9d5ba" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="2de28476-bdb4-48da-949a-a37a66f357f9" name="DesignPattern.ClassView">
+    <elementDefinition Id="eb0fd501-f10a-43ce-bedb-7510acc6e4c8" />
+  </package>
+</logicalClassDesignerModel>

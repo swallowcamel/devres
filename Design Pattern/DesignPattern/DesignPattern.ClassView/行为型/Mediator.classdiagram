@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="e18b5750-ef33-4709-b61c-a06289f879a6" name="Mediator（中介者模式）" linkedPackageId="a5475efc-cc82-401c-9d67-6456d2d90b69" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="f4fc9d59-e8a9-4aec-8f7f-662f2d436a0a">
+      <elementDefinition Id="b867b470-98ba-41c9-ac7b-b7045bb2f7dd" />
+      <body>具体同事类，每个具体同事只知道自己的行为，而不了解其它同事的情况，但他们却都认识中介者对象</body>
+      <annotatedElements>
+        <classMoniker Id="a4461312-e7c3-4549-abcd-1d5f42e59b89" LastKnownName="ConcreteColleague2" />
+        <classMoniker Id="264b615e-2ded-49ab-bd91-aaee97598a1b" LastKnownName="ConcreteColleague1" />
+      </annotatedElements>
+    </comment>
+    <comment Id="0788d5b8-a51d-41bb-a2a1-5125627161c6">
+      <elementDefinition Id="513fd247-499e-4a00-8f97-a88b02a06cd5" />
+      <body>具体中介者对象，实现抽象类的方法，它需要知道所有具体同事类，并从具体同事接收消息，向具体同事发出命令。</body>
+      <annotatedElements>
+        <classMoniker Id="abd18577-c70e-47a0-8da3-4227aaabebba" LastKnownName="ConcreteMediator" />
+      </annotatedElements>
+    </comment>
+    <comment Id="be4b67e3-4db6-4f9a-bc74-4fe3055c7b06">
+      <elementDefinition Id="ab958db2-dbed-4cfc-882f-69c0b5712493" />
+      <body>抽象中介者，定义了同事对象到中介者对象的接口</body>
+      <annotatedElements>
+        <classMoniker Id="8b98b8ea-dec4-41f5-9ca8-7230e19821e2" LastKnownName="Mediator" />
+      </annotatedElements>
+    </comment>
+    <comment Id="dc134f3f-2ce7-43cf-8694-c776cc1c2061">
+      <elementDefinition Id="329567be-806c-4cef-90ea-bda883dbd3aa" />
+      <body>抽象同事类</body>
+      <annotatedElements>
+        <classMoniker Id="e832612a-b33a-47d8-9755-714f6fa7b0fe" LastKnownName="Colleague" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="f9923150-a6f1-4d1b-ae47-405ade2c9c58">
+      <profileInstance Id="32fdbc71-b5fc-440f-ab48-8baca39af134" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="b9e2c06c-68fd-458b-ae6a-c05e34b85323">
+      <profileInstance Id="54422bd1-a12e-4584-ab34-621cedbc0ae7" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="8b98b8ea-dec4-41f5-9ca8-7230e19821e2" name="Mediator" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1a4a8471-7e86-482d-afc1-ec178ba19e7f" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e832612a-b33a-47d8-9755-714f6fa7b0fe" name="Colleague" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4b8db8f5-df8e-4ce0-b33f-81f496d4242b" />
+        <targetEnds>
+          <association Id="f22bf7f3-db20-4162-9c28-bbf43f31e8d5" isDerived="false" sourceEndRoleName="" targetEndRoleName="-mediator" isLeaf="false" isAbstract="false">
+            <classMoniker Id="8b98b8ea-dec4-41f5-9ca8-7230e19821e2" LastKnownName="Mediator" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ec7c6089-608a-4fad-9b82-de32c213a566" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="84398804-7e5c-4b49-9435-a63344493c30" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="97f6961e-c692-4a5e-98d2-3569a7023776" name="-mediator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ae8bd95a-e751-446b-828b-0f3c1151fbe2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ba18ce77-a30f-44ee-b3ef-3dab9c7c7d53" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="264b615e-2ded-49ab-bd91-aaee97598a1b" name="ConcreteColleague1" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="51ebc519-9969-4971-ab30-52870b75399f" />
+        <generalsInternal>
+          <generalization Id="49dcdabd-69a4-4390-bcbd-511795289036" isSubstitutable="false">
+            <classMoniker Id="e832612a-b33a-47d8-9755-714f6fa7b0fe" LastKnownName="Colleague" />
+            <elementDefinition Id="fe7b89ee-d820-43e5-8a67-9b94ae275291" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a4461312-e7c3-4549-abcd-1d5f42e59b89" name="ConcreteColleague2" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="59bf7cf8-4bca-41a0-8f87-05893daa4f1e" />
+        <generalsInternal>
+          <generalization Id="f071de57-6cef-4c21-ad70-a804bc935164" isSubstitutable="false">
+            <classMoniker Id="e832612a-b33a-47d8-9755-714f6fa7b0fe" LastKnownName="Colleague" />
+            <elementDefinition Id="ae39b3fe-fa13-476d-9b51-8a4dbac5c0ed" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="abd18577-c70e-47a0-8da3-4227aaabebba" name="ConcreteMediator" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="af700524-5d99-417c-8477-a7f1044b6750" />
+        <generalsInternal>
+          <generalization Id="2d161bc5-7ef4-4957-af31-43cff586d21b" isSubstitutable="false">
+            <classMoniker Id="8b98b8ea-dec4-41f5-9ca8-7230e19821e2" LastKnownName="Mediator" />
+            <elementDefinition Id="49a80411-bb01-43fe-ad7d-ad405e70d2b7" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="1fca33e0-8ce0-45b1-a0c1-61780a9f73e5" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="a4461312-e7c3-4549-abcd-1d5f42e59b89" LastKnownName="ConcreteColleague2" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2fb3f21c-e9cc-42c1-a7c3-efd57ea9e19f" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f26a67f8-8cff-4157-9e06-76c997fbe4ea" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9075bf2d-e351-4681-9b0a-d6686bbd94ee" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="76199e42-1891-4515-9dd2-973c0347b8d9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="627d89bd-9738-47e1-bfa4-e1d615ce4bf0" />
+          </association>
+          <association Id="4c8743a9-5d16-4d98-9bef-e7802d089849" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="264b615e-2ded-49ab-bd91-aaee97598a1b" LastKnownName="ConcreteColleague1" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="885d946a-b859-4dcd-a05e-a6bd38618275" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a2534283-fa50-43e6-b274-31319ad484da" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a61f3bb8-fded-4ea4-a87c-b81b931bfa03" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9e090968-97c6-4a6b-8884-454448c2b8e3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="586f72eb-6012-4977-ba69-1d3c15d32708" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="a5475efc-cc82-401c-9d67-6456d2d90b69" name="DesignPattern.ClassView">
+    <elementDefinition Id="eb0fd501-f10a-43ce-bedb-7510acc6e4c8" />
+  </package>
+</logicalClassDesignerModel>

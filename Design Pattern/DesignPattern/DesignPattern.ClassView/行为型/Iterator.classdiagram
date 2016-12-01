@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="80188990-23af-4633-a48c-0bb550984ec4" name="Iterator（迭代器模式）" linkedPackageId="7030712b-5fd8-4b54-a535-ee0ade5e3849" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="b78a9eee-2062-4677-870c-aba523b5831d">
+      <elementDefinition Id="532bc115-06d4-4fb3-901f-ab219c7e78c6" />
+      <body>迭代抽象类，用于定义First、Next、IsDone、CurrentItem等抽象方法，统一接口</body>
+      <annotatedElements>
+        <classMoniker Id="11e1bba9-f68f-4926-9091-b2a958f6feec" LastKnownName="Iterator" />
+      </annotatedElements>
+    </comment>
+    <comment Id="b2fbd348-0321-460d-b450-c2faf74e3d82">
+      <elementDefinition Id="647d91a4-4378-456d-a51c-354c06ddd673" />
+      <body>具体迭代器类，继承Iterator，实现First、Next，IsDone、CurrentItem
+等方法</body>
+      <annotatedElements>
+        <classMoniker Id="ceba6b9b-8fdd-4e6f-b232-d474b30fc20c" LastKnownName="ConcreteIterator" />
+      </annotatedElements>
+    </comment>
+    <comment Id="ebf7aaed-fc7c-49fd-88f6-5251ae6789ef">
+      <elementDefinition Id="cf4355b3-7c5d-447d-9b57-2fd52aa494e7" />
+      <body>具体聚集类 继承Aggregate</body>
+      <annotatedElements>
+        <classMoniker Id="be74a1c8-e33f-4414-833d-39e2d77e17ee" LastKnownName="ConcreteAggregate" />
+      </annotatedElements>
+    </comment>
+    <comment Id="80b228eb-2c0b-4809-ae47-0bc870b17739">
+      <elementDefinition Id="6f60102c-f52b-476c-95f2-78dccc2ee7ce" />
+      <body>聚集抽象类</body>
+      <annotatedElements>
+        <classMoniker Id="9c911750-b1df-4516-9855-f1e18fdefd0d" LastKnownName="Aggregate" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="ca410304-8203-4b96-8931-5f6fb7542346">
+      <profileInstance Id="ed53192a-0ec4-46f1-a8cf-7eb617040fb4" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="3af81906-d9c3-4bbf-870d-4dfa1fa90d2f">
+      <profileInstance Id="d813e6cd-7c75-48a8-a464-3606aca40dc3" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="9c911750-b1df-4516-9855-f1e18fdefd0d" name="Aggregate" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="75dcfe6e-c98b-4086-a2d0-2fce25437034" />
+        <ownedOperationsInternal>
+          <operation Id="28af7b87-ebf7-4a93-b17a-4f1a5cf6764c" name="CreateIterator" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2fc3cae4-ff79-4dbc-af09-80aee1fe711a" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="660cd2d0-4c2d-4904-a13f-f7506f988ee1" direction="Return" isUnique="false">
+                  <elementDefinition Id="dd0f9a92-deaf-4d07-a7f9-3d6c02faa933" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="50e6c6f1-52a9-4130-b165-76f69ef011e6" LastKnownName="Iterator" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="15bae3b6-c46b-4b0d-a8c3-060b7045fc75" name="Client" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="329db241-da14-410c-bf26-181f8e5328b9" />
+        <targetEnds>
+          <association Id="33912b50-3d31-4ca3-bb16-288523b68e87" isDerived="false" sourceEndRoleName="Client" targetEndRoleName="Iterator" isLeaf="false" isAbstract="false">
+            <classMoniker Id="11e1bba9-f68f-4926-9091-b2a958f6feec" LastKnownName="Iterator" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="83be10a1-8d00-42cd-9f79-5462eb3ec19e" name="Client" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="470dd8fc-a26d-4f74-853f-82ea9f611635" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b16a7ee7-6051-4cf0-a257-303fc31449b8" name="Iterator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0299ea3f-348a-4c6f-b8cd-efe5e94719fe" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8c668365-fbbd-4055-b22c-9e661ce4644d" />
+          </association>
+          <association Id="2c41c312-3823-421e-9f09-ec8dfac6b8b1" isDerived="false" sourceEndRoleName="Client" targetEndRoleName="Aggregate" isLeaf="false" isAbstract="false">
+            <classMoniker Id="9c911750-b1df-4516-9855-f1e18fdefd0d" LastKnownName="Aggregate" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="da12471b-505e-433c-82f3-68faedcad37a" name="Client" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a8ebd744-09c0-454c-885f-b20e7d66920e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a65e272c-ef43-41d7-b95c-1f2e307fb47d" name="Aggregate" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="67e10cbb-8f9d-4adc-9922-90622c8e078a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="dd9e59f0-149f-48af-a1e5-9795e23b25ee" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="11e1bba9-f68f-4926-9091-b2a958f6feec" name="Iterator" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="78852209-6643-4dd8-9a41-def5553ebfb1" />
+        <ownedOperationsInternal>
+          <operation Id="83a9b114-1f31-43b1-9ec8-9425470dcbdc" name="First" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="67825df4-0e97-4e65-a6cf-7a55981e41ef" />
+          </operation>
+          <operation Id="97b3db13-0458-4720-beef-389a1f659d2c" name="Next" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="17731a62-69ec-4a74-a8da-207fcd011fda" />
+          </operation>
+          <operation Id="a18ce7b5-daf3-4688-ba91-70439792d5f1" name="IsDone" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0eb1448c-3f0f-42fa-96b0-3040641db336" />
+          </operation>
+          <operation Id="5bed141f-569a-4c79-825d-64dc0b047b79" name="CurrentItem" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1d476daa-ac45-4597-b01b-5d41f702e572" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="be74a1c8-e33f-4414-833d-39e2d77e17ee" name="ConcreteAggregate" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7dc4df8b-da00-4f76-9fc0-dfd0cfe1fa1a" />
+        <suppliersInternal>
+          <dependency Id="86b3fb47-4f10-4fad-8c39-00c344d1aa52">
+            <classMoniker Id="ceba6b9b-8fdd-4e6f-b232-d474b30fc20c" LastKnownName="ConcreteIterator" />
+            <elementDefinition Id="ebbfd91b-f19b-4577-9c37-cf4efcedefe1" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="2608a32a-9129-429d-bdfe-2ed5ae3ade76" isSubstitutable="false">
+            <classMoniker Id="9c911750-b1df-4516-9855-f1e18fdefd0d" LastKnownName="Aggregate" />
+            <elementDefinition Id="d6dceb7b-dd28-424e-b939-4ed745312792" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="e01976e0-5865-4c1c-bfaf-94e2a07e5621" name="CreateIterator" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1bbf66d3-a7e0-4517-b6fe-06e18bd3ee2d" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6653dbf9-1fd7-4290-8b26-9d9d56b7c75a" direction="Return" isUnique="false">
+                  <elementDefinition Id="990c0dc0-b2c2-4f24-9875-cc834c638c6f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="50e6c6f1-52a9-4130-b165-76f69ef011e6" LastKnownName="Iterator" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ceba6b9b-8fdd-4e6f-b232-d474b30fc20c" name="ConcreteIterator" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8b18352b-740c-4004-a7c4-2ccb9a4ed75d" />
+        <generalsInternal>
+          <generalization Id="2bfa6495-ad52-42b4-87ce-ff12dd507743" isSubstitutable="false">
+            <classMoniker Id="11e1bba9-f68f-4926-9091-b2a958f6feec" LastKnownName="Iterator" />
+            <elementDefinition Id="312f376c-0ae1-4ac3-a0e8-dd8a6637e470" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="997a3375-f2be-4c5a-be6b-cca548eca03d" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="be74a1c8-e33f-4414-833d-39e2d77e17ee" LastKnownName="ConcreteAggregate" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e58676d5-8232-49ad-b815-bbbb61a19ea0" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="dd10cb63-e6d0-4ba6-a965-dcd3de260778" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a28352d4-7315-4d78-a829-ef9f1bfbfb6d" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f918a6f7-7650-46ba-9c62-2652ec20ebc1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e3222b46-432b-4a5f-83b4-f1626da29b4b" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="50e6c6f1-52a9-4130-b165-76f69ef011e6" name="Iterator" isAbstract="false" isLeaf="false" cachedFullName="DesignPattern.ClassView::Iterator">
+        <elementDefinition Id="78852209-6643-4dd8-9a41-def5553ebfb1" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="7030712b-5fd8-4b54-a535-ee0ade5e3849" name="DesignPattern.ClassView">
+    <elementDefinition Id="eb0fd501-f10a-43ce-bedb-7510acc6e4c8" />
+  </package>
+</logicalClassDesignerModel>

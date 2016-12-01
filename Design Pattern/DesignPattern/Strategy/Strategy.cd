@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DesignPattern.AbstractStrategy">
+    <Position X="7.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>AbstractStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Context">
+    <Position X="4" Y="1.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Context.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_strategy" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DesignPattern.ConcreteStrategyA">
+    <Position X="5.25" Y="3" Width="1.75" />
+    <InheritanceLine Type="DesignPattern.AbstractStrategy" FixedFromPoint="true">
+      <Path>
+        <Point X="7.938" Y="2.378" />
+        <Point X="7.938" Y="2.76" />
+        <Point X="6.125" Y="2.76" />
+        <Point X="6.125" Y="3" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>ConcreteStrategyA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.ConcreteStrategyB">
+    <Position X="7.5" Y="3" Width="1.75" />
+    <InheritanceLine Type="DesignPattern.AbstractStrategy" FixedFromPoint="true">
+      <Path>
+        <Point X="8.375" Y="2.378" />
+        <Point X="8.375" Y="3" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>ConcreteStrategyB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.ConcreteStrategyC">
+    <Position X="9.75" Y="3" Width="1.75" />
+    <InheritanceLine Type="DesignPattern.AbstractStrategy" FixedFromPoint="true">
+      <Path>
+        <Point X="8.688" Y="2.378" />
+        <Point X="8.688" Y="2.7" />
+        <Point X="10.625" Y="2.7" />
+        <Point X="10.625" Y="3" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>ConcreteStrategyC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9.75" />
+</ClassDiagram>

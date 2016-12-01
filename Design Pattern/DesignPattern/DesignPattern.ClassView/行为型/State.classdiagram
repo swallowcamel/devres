@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="50116a4b-7bad-44f9-9193-6b4386ce0e27" name="State（状态模式）" linkedPackageId="dae19b87-de8b-42b9-a121-95c05c01db7f" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="c32f44f3-24d0-443c-87ca-ccf28857e3ce">
+      <elementDefinition Id="21ab06d0-8086-43fa-8d24-9af84c5b0543" />
+      <body>维护一个ConcreteState子类的实例，这个实例定义当前的状态</body>
+      <annotatedElements>
+        <classMoniker Id="18dd711e-3980-4964-9708-0ebd56cd32bc" LastKnownName="Context" />
+      </annotatedElements>
+    </comment>
+    <comment Id="11f3abf4-6979-4018-ad9d-56195132e540">
+      <elementDefinition Id="73a64085-137c-4138-85f4-e9d80839859b" />
+      <body>具体状态，每一个子类实现一个与Context的状态相关的行为</body>
+      <annotatedElements>
+        <classMoniker Id="36923734-82c3-42e0-b25b-847d5926f9cf" LastKnownName="ConcreteStateA" />
+        <classMoniker Id="9101b094-85bb-46fa-ac0b-af41a5ce6789" LastKnownName="ConcreteStateB" />
+        <classMoniker Id="9a2d1304-e767-4b20-9fe9-4be5ac1f80f5" LastKnownName="ConcreateStateC" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="522df319-0adf-46d8-8dd4-d4015dc9428c">
+      <profileInstance Id="74f128ac-e751-45cd-91eb-61c12bd56d9b" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="ef3ec50b-723f-4e27-be76-3bca540118e4">
+      <profileInstance Id="bd811b5e-9ee7-4759-bd9d-0ee7572b3a41" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="27c44f54-3981-4dad-b27e-38e59dda0d73" name="State" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="95d407b5-9412-4fd5-982c-58a4d40a8cc9" />
+        <ownedOperationsInternal>
+          <operation Id="80cc09cb-1da4-4f71-9e7e-058106b1ed83" name="Handle" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="123cd9ce-4652-4594-847a-c24c0220fefd" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="18dd711e-3980-4964-9708-0ebd56cd32bc" name="Context" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="72c2d190-a03a-4093-97be-7c66f2db41ad" />
+        <targetEnds>
+          <association Id="a295ecbf-5063-4363-b307-53f41f0aa571" isDerived="false" sourceEndRoleName="" targetEndRoleName="-state" isLeaf="false" isAbstract="false">
+            <classMoniker Id="27c44f54-3981-4dad-b27e-38e59dda0d73" LastKnownName="State" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="717e870d-847a-460a-a487-139afac2ab98" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e228d236-fc23-4b1d-8f26-645090e659ab" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="52150352-9cdc-4b96-9390-d17424778489" name="-state" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4c4ab70d-d347-416d-bdbd-f0ae650042d4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="31c50cf4-cc9d-4bd3-8047-6c08850fc8ac" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="4dc2356c-d283-411e-b2e1-8c7c2523758e" name="Request" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="01c8a852-0c32-4541-84db-dde27540c6e6" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="36923734-82c3-42e0-b25b-847d5926f9cf" name="ConcreteStateA" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9d28e536-10d3-4c98-a8bf-dbeebb42d3c4" />
+        <generalsInternal>
+          <generalization Id="ca4fbf0c-59f6-45e0-ba57-f3f4b58a5d9f" isSubstitutable="false">
+            <classMoniker Id="27c44f54-3981-4dad-b27e-38e59dda0d73" LastKnownName="State" />
+            <elementDefinition Id="55250446-726b-4a0e-83c8-96c5d234feff" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="669ba7e5-cb92-4cc4-b03f-83e9197527f3" name="Handle" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="35558a29-fd3e-4f83-adad-13e4a3e648b4" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="9101b094-85bb-46fa-ac0b-af41a5ce6789" name="ConcreteStateB" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="87780401-c0fd-4908-8d03-99470a51ee31" />
+        <generalsInternal>
+          <generalization Id="1ad22789-015d-4400-8902-eca7ef9ced82" isSubstitutable="false">
+            <classMoniker Id="27c44f54-3981-4dad-b27e-38e59dda0d73" LastKnownName="State" />
+            <elementDefinition Id="0068ec30-719e-44aa-8f6d-e08bf8e05bf8" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="a04f3d53-c309-4743-8039-2d40d975cbb5" name="Handle" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="bcd7e8e7-8759-434e-8be3-10e1e4454f15" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="9a2d1304-e767-4b20-9fe9-4be5ac1f80f5" name="ConcreateStateC" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="93b2cb7f-1280-447f-87ea-8a386efe7af8" />
+        <generalsInternal>
+          <generalization Id="e9215555-04ec-4c85-9ae9-4f489ccbbba6" isSubstitutable="false">
+            <classMoniker Id="27c44f54-3981-4dad-b27e-38e59dda0d73" LastKnownName="State" />
+            <elementDefinition Id="d10f2fac-50bd-4d05-9e5e-ec3d577ec4a2" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="5bb81885-cc77-4b6a-a816-7ad6aae9e1bd" name="Handle" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8afababe-f0db-4270-a343-b22b80aa807d" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="dae19b87-de8b-42b9-a121-95c05c01db7f" name="DesignPattern.ClassView">
+    <elementDefinition Id="eb0fd501-f10a-43ce-bedb-7510acc6e4c8" />
+  </package>
+</logicalClassDesignerModel>
